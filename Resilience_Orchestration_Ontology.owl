@@ -1,0 +1,1145 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://webprotege.stanford.edu/project/9IGcjK9vvio5JEOpQErQJE#"
+     xml:base="http://webprotege.stanford.edu/project/9IGcjK9vvio5JEOpQErQJE"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:webprotege="http://webprotege.stanford.edu/"
+     xmlns:SOAROntology="http://webprotege.stanford.edu/project/SOAROntology#"
+     xmlns:MidsocOntology="http://webprotege.stanford.edu/project/MidsocOntology#"
+     xmlns:ResilienceOntology="http://webprotege.stanford.edu/project/ResilienceOntology#">
+    <owl:Ontology rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#stringArray -->
+
+    <rdfs:Datatype rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#stringArray"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/hasInput -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/hasInput">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+        <rdfs:label xml:lang="en">hasInput</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/hasNonFuncRequirement -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/hasNonFuncRequirement">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/CapabilityRequirements"/>
+        <rdfs:label xml:lang="en">hasRequirement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#hasFunctionalCapability -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#hasFunctionalCapability">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#hasOutput -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#hasOutput">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+        <rdfs:range rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/CapabilityRequirements -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/CapabilityRequirements">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Capability"/>
+        <rdfs:label xml:lang="en">CapabilityRequirements</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/ResilienceTool -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/ResilienceTool">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">ResilienceTool</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#APM -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#APM">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#Capability -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#Capability"/>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#ConfigurationManager -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#ConfigurationManager">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#DDoS_Protection -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#DDoS_Protection">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#EDR -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#EDR">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#EmailGateway -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#EmailGateway">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#Firewall -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#Firewall">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#ForensicDataCollector -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#ForensicDataCollector">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#FullPacketCapture -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#FullPacketCapture">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Capability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#IAM -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#IAM">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/CapabilityRequirements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#LoadBalancer -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#LoadBalancer">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#MDM -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#MDM">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#NAC -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#NAC">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#OperatingSystem -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#OperatingSystem">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/CapabilityRequirements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#PAM -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#PAM">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#PatchManager -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#PatchManager">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#SIEM -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#SIEM">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#VunerabilityScanner -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#VunerabilityScanner">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#Backup&amp;RestoreManager -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#Backup&amp;RestoreManager">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#AccountID -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#AccountID">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#AlertInformation -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#AlertInformation">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#Arkime -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#Arkime">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FullPacketCapture"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#GetPacketCapture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#BlockEmailAddress -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#BlockEmailAddress">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#EmailAddress"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#BlockIPAddress -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#BlockIPAddress">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#IP"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#BlockURL -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#BlockURL">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#URL"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#ChangeConfiguration -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#ChangeConfiguration">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Configuration"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#IP"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#ChangePassword -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#ChangePassword">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#AccountID"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#CollectEmailAddress -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#CollectEmailAddress">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#EmailAddress"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#EmailAddress"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#CollectRamImage -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#CollectRamImage">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#IP"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#RamImage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#Configuration -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#Configuration">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#ConfigurationVersion -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#ConfigurationVersion">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#DestinationIP -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#DestinationIP">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#DisableAccount -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#DisableAccount">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#AccountID"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#DisableAdminPrivileges -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#DisableAdminPrivileges">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#AccountID"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#DisableEmailAddress -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#DisableEmailAddress">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#EmailAddress"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#DisableSoftware -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#DisableSoftware">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#IP"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#SoftwareName"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#DivertNetworkTraffic -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#DivertNetworkTraffic">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#LoadBalancerRule"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#DomainName -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#DomainName">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#EmailAddress -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#EmailAddress">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#FileName -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#FileName">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#FirewallRule -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#FirewallRule">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#GetAccountID -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#GetAccountID">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#EmailAddress"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#MobileDeviceID"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#AccountID"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#GetIPAddress -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#GetIPAddress">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#EmailAddress"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#IP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#GetLogs -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#GetLogs">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#AccountID"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#DomainName"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#IP"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#LogType"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#MailAddress"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#WebAppName"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Logs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#GetMobileDeviceGeoInfo -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#GetMobileDeviceGeoInfo">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#MobileDeviceID"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#MobileDeviceGeoInfo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#GetMobileDeviceInfo -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#GetMobileDeviceInfo">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#MobileDeviceID"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#MobileDeviceInfo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#GetPacketCapture -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#GetPacketCapture">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#DestinationIP"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#SourceIP"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#StartTime"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#StopTime"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Pcap"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#Headwind_MDM -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#Headwind_MDM">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#MDM"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#GetAccountID"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#GetMobileDeviceGeoInfo"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#GetMobileDeviceInfo"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#LockMobileDevice"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#WipeMobileDevice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#IP -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#IP">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#IsolateHost -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#IsolateHost">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#IP"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#IsolateNetwork -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#IsolateNetwork">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#NetworkMask"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#KeyCloak -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#KeyCloak">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/ResilienceTool"/>
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#IAM"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#ChangePassword"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#DisableAccount"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#DisableEmailAddress"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#GetAccountID"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#ResetPassword"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#RevokePrivileges"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#LoadBalancerRule -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#LoadBalancerRule">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#LockMobileDevice -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#LockMobileDevice">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#MobileDeviceID"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#LogType -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#LogType">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#Logs -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#Logs">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#MailAddress -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#MailAddress">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#MobileDeviceGeoInfo -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#MobileDeviceGeoInfo">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#MobileDeviceID -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#MobileDeviceID">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#MobileDeviceInfo -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#MobileDeviceInfo">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#NetworkMask -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#NetworkMask">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#NotifySOCTeam -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#NotifySOCTeam">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#AlertInformation"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#PatchData -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#PatchData">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#PatchSystem -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#PatchSystem">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#IP"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#PatchData"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#Pcap -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#Pcap">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#QuarantineFile -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#QuarantineFile">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FileName"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#IP"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#RamImage -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#RamImage">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#RateLimitTraffic -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#RateLimitTraffic">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#URL"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#RemoveMalware -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#RemoveMalware">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FileName"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#IP"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#ResetPassword -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#ResetPassword">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#AccountID"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#RestartSystem -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#RestartSystem">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#IP"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#RestoreConfiguration -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#RestoreConfiguration">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#ConfigurationVersion"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#IP"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#RestoreSystem -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#RestoreSystem">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#IP"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#VersionNumber"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#Result -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#Result">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#AccountID"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#RevokePrivileges -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#RevokePrivileges">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#AccountID"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#ScanMalware -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#ScanMalware">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#IP"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#ScanVulnerability -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#ScanVulnerability">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#IP"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#SoftwareName -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#SoftwareName">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#SourceIP -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#SourceIP">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#StartTime -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#StartTime">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#StopTime -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#StopTime">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#TerminateVPNSession -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#TerminateVPNSession">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#AccountID"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#URL -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#URL">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#UninstallSoftware -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#UninstallSoftware">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#SoftwareName"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#ValidateFunctionality -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#ValidateFunctionality">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#IP"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#VersionNumber -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#VersionNumber">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#Wazuh -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#Wazuh">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#EDR"/>
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#SIEM"/>
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#VunerabilityScanner"/>
+        <webprotege:hasNonFuncRequirement rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnLinux"/>
+        <webprotege:hasNonFuncRequirement rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnMac"/>
+        <webprotege:hasNonFuncRequirement rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnWindows"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#DisableSoftware"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#GetLogs"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#QuarantineFile"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#RemoveMalware"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#ScanMalware"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#ScanVulnerability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#WebAppName -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#WebAppName">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#InputOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#WinPmem -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#WinPmem">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#ForensicDataCollector"/>
+        <webprotege:hasNonFuncRequirement rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnWindows"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#CollectRamImage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#WipeMobileDevice -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#WipeMobileDevice">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#FunctionalCapability"/>
+        <webprotege:hasInput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#MobileDeviceID"/>
+        <ResilienceOntology:hasOutput rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnLinux -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnLinux">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#OperatingSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnMac -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnMac">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#OperatingSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnWindows -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnWindows">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#OperatingSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#ansible_a -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#ansible_a">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#ConfigurationManager"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#ChangeConfiguration"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#RestartSystem"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#UninstallSoftware"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#chocolatey_c -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#chocolatey_c">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#PatchManager"/>
+        <webprotege:hasNonFuncRequirement rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnWindows"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#PatchSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#duplicati_d -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#duplicati_d">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Backup&amp;RestoreManager"/>
+        <webprotege:hasNonFuncRequirement rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnLinux"/>
+        <webprotege:hasNonFuncRequirement rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnMac"/>
+        <webprotege:hasNonFuncRequirement rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnWindows"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#RestoreConfiguration"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#RestoreSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#fmem -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#fmem">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#ForensicDataCollector"/>
+        <webprotege:hasNonFuncRequirement rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnLinux"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#CollectRamImage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#haproxy_h -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#haproxy_h">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#DDoS_Protection"/>
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#LoadBalancer"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#DivertNetworkTraffic"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#RateLimitTraffic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#nix_n -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#nix_n">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#PatchManager"/>
+        <webprotege:hasNonFuncRequirement rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnLinux"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#PatchSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#packetFence_p -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#packetFence_p">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#NAC"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#IsolateHost"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#pfSense_p -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#pfSense_p">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#Firewall"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#BlockIPAddress"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#BlockURL"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#IsolateNetwork"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#TerminateVPNSession"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#proxmox -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#proxmox">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#EmailGateway"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#BlockEmailAddress"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#CollectEmailAddress"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#GetIPAddress"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#NotifySOCTeam"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#teleport_t -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#teleport_t">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#PAM"/>
+        <webprotege:hasNonFuncRequirement rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnLinux"/>
+        <webprotege:hasNonFuncRequirement rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnMac"/>
+        <webprotege:hasNonFuncRequirement rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnWindows"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#DisableAdminPrivileges"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#RevokePrivileges"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://webprotege.stanford.edu/project/ResilienceOntology#zabbix_z -->
+
+    <owl:NamedIndividual rdf:about="http://webprotege.stanford.edu/project/ResilienceOntology#zabbix_z">
+        <rdf:type rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#APM"/>
+        <webprotege:hasNonFuncRequirement rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnLinux"/>
+        <webprotege:hasNonFuncRequirement rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnMac"/>
+        <webprotege:hasNonFuncRequirement rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#WorksOnWindows"/>
+        <ResilienceOntology:hasFunctionalCapability rdf:resource="http://webprotege.stanford.edu/project/ResilienceOntology#ValidateFunctionality"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
