@@ -1,0 +1,279 @@
+Playbook No;Playbook Step;Playbook;Playbook Step;Tool required for executing the step ;Confidence Score
+1;1-1;Phishing Incident Response;Collect the email addresses that the phishing email is sent.;EMAIL GATEWAY;5
+1;1-2;Phishing Incident Response;Disable compromised email address to prevent further unauthorized access;IAM;4
+1;1-3;Phishing Incident Response;Get account ID from email address;IAM;4
+1;1-4;Phishing Incident Response;Diasble the account related to the compromised email;IAM;5
+1;1-5;Phishing Incident Response;Change the password of the compromised account.;IAM;5
+1;1-6;Phishing Incident Response;Notify the incident response team about the phishing incident;EMAIL GATEWAY;3
+1;1-7;Phishing Incident Response;Get the ip address/addresses of the phishing email sender.;EMAIL GATEWAY;5
+1;1-8;Phishing Incident Response;Block the email address that sent the phishing email.;EMAIL GATEWAY;5
+1;1-9;Phishing Incident Response;Block the ip address that sent the phishing email.;FIREWALL;5
+1;1-10;Phishing Incident Response;Scan the mail servers for possible vulnerabilities.;VULNERABILITY SCANNER;5
+1;1-11;Phishing Incident Response;Apply patches and updates to the mail server if any vulnerability is detected.;PATCH MANAGER;5
+2;2-1;Malware Infection Response;Isolate affected systems from the network to prevent further spread of malware;NAC;5
+2;2-2;Malware Infection Response;Notify the incident response team about the malware infection;EMAIL GATEWAY;3
+2;2-3;Malware Infection Response;Use up-to-date antivirus or anti-malware tools to scan and remove the malware from infected systems;EDR;5
+2;2-4;Malware Infection Response;Scan the affected systems for possible vulnerabilities.;VULNERABILITY SCANNER;5
+2;2-5;Malware Infection Response;Apply patches and updates to vulnerable software or operating systems if any vulnerability is detected.;PATCH MANAGER;5
+2;2-6;Malware Infection Response;Restore affected systems from known good backups to ensure they are clean and free from malware;BACKUP & RESTORE MANAGER;1
+2;2-7;Malware Infection Response;Validate the functionality of restored systems;APM;1
+3;3-1;Ransomware Attack Response;Isolate affected systems to prevent the spread of ransomware to other assets;NAC;5
+3;3-2;Ransomware Attack Response;Isolate affected networks to prevent the spread of ransomware to other assets;FIREWALL;5
+3;3-3;Ransomware Attack Response;Notify the incident response team about the ransomware attack;EMAIL GATEWAY;3
+3;3-4;Ransomware Attack Response;Restore affected systems and data from backups once the ransomware has been eradicated and systems have been secured;BACKUP & RESTORE MANAGER;1
+3;3-5;Ransomware Attack Response;Validate the functionality of restored systems;APM;4
+4;4-1;Data Breach Response;Notify the incident response team about the data breach incident;EMAIL GATEWAY;3
+4;4-2;Data Breach Response;Isolate affected systems prevent further unauthorized access or data loss;NAC;5
+4;4-3;Data Breach Response;Collect system logs of affected systems;SIEM;4
+4;4-4;Data Breach Response;Collect network traffic capture of the affected systems;FULL PACKET CAPTURE;5
+4;4-5;Data Breach Response;Collect memory image of the affected systems;FORENSIC DATA COLLECTOR;5
+4;4-6;Data Breach Response;Block any malicious ip address if detected by analysis;FIREWALL;5
+5;5-1;Insider Threat Detection and Response;Disable the compromised user account to prevent further damage or unauthorized access;IAM;5
+5;5-2;Insider Threat Detection and Response;Isolate the compromised system to prevent further damage or unauthorized access;NAC;5
+5;5-3;Insider Threat Detection and Response;Revoke privileges of the insider's accounts;IAM;5
+5;5-4;Insider Threat Detection and Response;Get DLP logs of the insider's account;SIEM;5
+5;5-5;Insider Threat Detection and Response;Get network traffic logs of the insider's account;SIEM;5
+5;5-6;Insider Threat Detection and Response;Notify the incident response team about the insider threat incident;EMAIL GATEWAY;3
+6;6-1;Distributed Denial of Service (DDoS) Attack Response;Notify the incident response team about the DDoS attack;EMAIL GATEWAY;3
+6;6-2;Distributed Denial of Service (DDoS) Attack Response;Divert incoming traffic to dedicated DDoS mitigation services or cloud-based DDoS protection platforms;DDOS Protection;5
+6;6-3;Distributed Denial of Service (DDoS) Attack Response;Block the ip addresses of the DDoS attack;FIREWALL;4
+6;6-4;Distributed Denial of Service (DDoS) Attack Response;Check the health status of services to detect any denial of service;APM;5
+6;6-5;Distributed Denial of Service (DDoS) Attack Response;Restart affected services or systems. ;Configuration Manager;5
+6;6-6;Distributed Denial of Service (DDoS) Attack Response;Verify restarted system avaiability;APM;5
+7;7-1;Unauthorized Access Response;Alert the incident response team about the unauthorized access;EMAIL GATEWAY;3
+7;7-2;Unauthorized Access Response;Disable affected accounts to prevent further unauthorized access;IAM;5
+7;7-3;Unauthorized Access Response;Isolate affected systems to prevent further unauthorized access ;NAC;5
+7;7-4;Unauthorized Access Response;Revoke compromised user privileges;IAM;5
+7;7-5;Unauthorized Access Response;Collect system logs of affected systems;SIEM;4
+7;7-6;Unauthorized Access Response;Collect network traffic capture of the related system;FULL PACKET CAPTURE;5
+7;7-7;Unauthorized Access Response;Collect network traffic logs of the related system;SIEM;4
+8;8-1;Physical Security Breach Response;Alert the incident response team about the unauthorized access or account compromise;EMAIL GATEWAY;3
+9;9-1;Social Engineering Incident Response;Isolate affected systems to prevent further compromise or unauthorized access;NAC;5
+9;9-2;Social Engineering Incident Response;Disable affected accounts to prevent further compromise or unauthorized access;IAM;5
+9;9-3;Social Engineering Incident Response;Revoke access permissions for compromised accounts;IAM;5
+9;9-4;Social Engineering Incident Response;Notify the social engineering incident to IT security team;EMAIL GATEWAY;3
+10;10-1;Network Intrusion Detection and Response;Collect network traffic logs of the affected systems;SIEM;5
+10;10-2;Network Intrusion Detection and Response;Collect network traffic capture of the affected systems;FULL PACKET CAPTURE;5
+10;10-3;Network Intrusion Detection and Response;Collect system logs of affected systems;SIEM;4
+10;10-4;Network Intrusion Detection and Response;Collect memory image of the affected systems;FORENSIC DATA COLLECTOR;5
+10;10-5;Network Intrusion Detection and Response;Isolate compromised systems to prevent further unauthorized access or data exfiltration;NAC;5
+10;10-6;Network Intrusion Detection and Response;Isolate compromised segments of the network to prevent further unauthorized access or data exfiltration;FIREWALL;5
+10;10-7;Network Intrusion Detection and Response;Block the malicious ip address that caused network intrusion;FIREWALL;5
+10;10-8;Network Intrusion Detection and Response;Make vulnerability analysis in the affected systems;VULNERABILITY SCANNER;5
+10;10-9;Network Intrusion Detection and Response;Patch vulnerabilities exploited by the attackers to prevent future intrusions;PATCH MANAGER;5
+10;10-10;Network Intrusion Detection and Response;Engage security personnel to coordinate incident response efforts;EMAIL GATEWAY;3
+11;11-1;Endpoint Security Incident Response;Alert the incident response team about endpoint security incident;EMAIL GATEWAY;3
+11;11-2;Endpoint Security Incident Response;Disconnect the affected endpoint from the network to prevent further communication with potential attackers or the spread of malware;EDR;4
+11;11-3;Endpoint Security Incident Response;Collect system logs of the affected systems;SIEM;2
+11;11-4;Endpoint Security Incident Response;Collect memory dumps of the affected systems;FORENSIC DATA COLLECTOR;5
+11;11-5;Endpoint Security Incident Response;Collect network traffic captures of the affected systems;FULL PACKET CAPTURE;4
+11;11-6;Endpoint Security Incident Response;Collect network traffic logs of the affected systems;SIEM;5
+11;11-7;Endpoint Security Incident Response;Remove or quarantine malicious files, processes, or artifacts identified during the forensic analysis;EDR;5
+11;11-8;Network Intrusion Detection and Response;Make vulnerability analysis in the affected systems;VULNERABILITY SCANNER;5
+11;11-9;Endpoint Security Incident Response;Patch or update vulnerable software or systems to prevent further exploitation;PATCH MANAGER;5
+11;11-10;Endpoint Security Incident Response;Restore the affected endpoint to a known good state by reimaging or reinstalling the operating system and applications;BACKUP & RESTORE MANAGER;1
+12;12-1;Suspicious Email Attachment Response;Alert the incident response team about Suspicious Email Attachment;EMAIL GATEWAY;3
+12;12-2;Suspicious Email Attachment Response;Block the email address that sent the suspicious email.;EMAIL GATEWAY;5
+12;12-3;Suspicious Email Attachment Response;Block the ip address that sent the suspicious email.;FIREWALL;5
+12;12-4;Suspicious Email Attachment Response;Get the accounts that got the attachment;EMAIL GATEWAY;5
+12;12-5;Suspicious Email Attachment Response;Disable the affected emails to prevent further spread of the attachment;IAM;4
+12;12-6;Suspicious Email Attachment Response;Scan the affected system with updated antivirus or anti-malware tools to detect and remove any malicious content;EDR;5
+13;13-1;Unauthorized Device or Media Incident Response;Isolate compromised systems to prevent further unauthorized access or data exfiltration;NAC;5
+13;13-2;Unauthorized Device or Media Incident Response;Notify the incident to the appropriate security team for immediate action;EMAIL GATEWAY;3
+13;13-3;Unauthorized Device or Media Incident Response;Scan the system that the device is mounted;EDR;4
+14;14-1;Vulnerability Exploitation Response;Isolate affected systems from the network to prevent further exploitation;NAC;5
+14;14-2;Vulnerability Exploitation Response;Collect system logs of the compromised system;SIEM;4
+14;14-3;Vulnerability Exploitation Response;Collect network traffic logs of the compromised system;SIEM;5
+14;14-4;Vulnerability Exploitation Response;Collect memory dump of the compromised system;FORENSIC DATA COLLECTOR;5
+14;14-5;Vulnerability Exploitation Response;Engage incident response team to investigate the incident thoroughly;EMAIL GATEWAY;3
+14;14-6;Vulnerability Exploitation Response;Scan the compromised system for possible vulnerabilities;VULNERABILITY SCANNER;5
+14;14-7;Vulnerability Exploitation Response;Apply necessary patches to fix the identified vulnerabilities;PATCH MANAGER;5
+14;14-8;Vulnerability Exploitation Response;Apply necessary configuration changes to fix the identified vulnerabilities;Configuration Manager;5
+14;14-9;Vulnerability Exploitation Response;Validate the functionality of restored systems;APM;1
+14;14-10;Vulnerability Exploitation Response;Alert the incident response team about vulnerability exploitation;EMAIL GATEWAY;3
+15;15-1;Brute Force Attack Response;Alert the incident response team about vulnerability exploitation;EMAIL GATEWAY;3
+15;15-2;Brute Force Attack Response;Collect system logs of the compromised system;SIEM;4
+15;15-3;Brute Force Attack Response;Collect network traffic logs of the compromised system;SIEM;5
+15;15-4;Brute Force Attack Response;Block IP address of the attacker;FIREWALL;5
+15;15-5;Brute Force Attack Response;Disable the affected accounts;IAM;5
+16;16-1;Web Application Security Incident Response;Engage incident response team to analyze the incident;EMAIL GATEWAY;3
+16;16-2;Web Application Security Incident Response;Collect affected system logs of the affected system;SIEM;4
+16;16-3;Web Application Security Incident Response;Collect network traffic logs of the affected systems;SIEM;5
+16;16-4;Web Application Security Incident Response;Collect network traffic data of the affected systems;FULL PACKET CAPTURE;4
+16;16-5;Web Application Security Incident Response;Collect web application logs of the affected systems;SIEM;5
+16;16-6;Web Application Security Incident Response;Scan the affected systems for possible vulnerabilities.;VULNERABILITY SCANNER;5
+16;16-7;Web Application Security Incident Response;Apply necessary security patches or updates to address identified vulnerabilities in the web application;PATCH MANAGER;5
+17;17-1;Data Exfiltration Response;Isolate affected systems from the network to prevent further data exfiltration;NAC;5
+17;17-2;Data Exfiltration Response;Engage incident response experts to investigate the data exfiltration incident thoroughly;EMAIL GATEWAY;3
+17;17-3;Data Exfiltration Response;Collect affected system logs of the affected system;SIEM;4
+17;17-4;Data Exfiltration Response;Collect network traffic logs of the affected systems;SIEM;5
+17;17-5;Data Exfiltration Response;Collect network traffic data of the affected systems;FULL PACKET CAPTURE;4
+17;17-6;Data Exfiltration Response;Disable user accounts to limit unauthorized access.;IAM;5
+18;18-1;Incident Response for Cloud Services;Engage incident response teams to conduct a detailed analysis of the incident;EMAIL GATEWAY;3
+18;18-2;Incident Response for Cloud Services;Collect network traffic logs of the affected systems;SIEM;5
+18;18-3;Incident Response for Cloud Services;Collect affected system logs of the affected system;SIEM;5
+19;19-1;IoT Device Security Incident Response;Isolate affected devices from the network to prevent further unauthorized access or propagation of the security incident;NAC;5
+19;19-2;IoT Device Security Incident Response;Engage incident response teams to respond to the security incident;EMAIL GATEWAY;3
+19;19-3;IoT Device Security Incident Response;Collect affected system logs of the affected system;SIEM;4
+19;19-4;IoT Device Security Incident Response;Collect network traffic logs of the affected systems;SIEM;5
+19;19-5;IoT Device Security Incident Response;Scan the affected systems for possible vulnerabilities.;VULNERABILITY SCANNER;5
+19;19-6;IoT Device Security Incident Response;Apply patches to address identified vulnerabilities or exploit methods;PATCH MANAGER;5
+20;20-1;Identity Theft Response;Disable the affected accounts;IAM;5
+20;20-2;Identity Theft Response;Engage incident response experts to investigate the incident;EMAIL GATEWAY;3
+20;20-3;Identity Theft Response;Collect affected system logs related to the affected acccount ;SIEM;4
+21;21-1;Business Email Compromise (BEC) Incident Response;Disable affected email accounts to prevent further unauthorized access or propagation of fraudulent activities;IAM;4
+21;21-2;Business Email Compromise (BEC) Incident Response;Get account ID from email address;IAM;4
+21;21-3;Business Email Compromise (BEC) Incident Response;Diasble the account related to the compromised email;IAM;4
+21;21-4;Business Email Compromise (BEC) Incident Response;Change the password of the compromised account.;IAM;5
+21;21-5;Business Email Compromise (BEC) Incident Response;Engage incident response experts to investigate the BEC incident thoroughly;EMAIL GATEWAY;3
+21;21-6;Business Email Compromise (BEC) Incident Response;Collect email logs;SIEM;5
+22;22-1;Supply Chain Attack Response;Isolate compromised systems of the supply chain to prevent further propagation of the attack;NAC;5
+22;22-2;Supply Chain Attack Response;Disable affected software from the network;EDR;5
+22;22-3;Supply Chain Attack Response;Engage incident response teams to investigate the supply chain attack thoroughly;EMAIL GATEWAY;3
+22;22-4;Supply Chain Attack Response;Collect network traffic logs of the affected software;SIEM;5
+22;22-5;Supply Chain Attack Response;Implement security patches provided by the affected vendor;PATCH MANAGER;5
+23;23-1;Incident Response for Insider Trading;Collect system logs of the insider trading systems;SIEM;4
+23;23-2;Incident Response for Insider Trading;Collect email logs of the insider trading user;SIEM;5
+23;23-3;Incident Response for Insider Trading;Engage incident response teams to investigate the Insider Trading attack thoroughly;EMAIL GATEWAY;3
+24;24-1;Incident Response for Intellectual Property Theft;Alert the incident response team;EMAIL GATEWAY;3
+24;24-2;Incident Response for Intellectual Property Theft;Collect related system logs;SIEM;4
+24;24-3;Incident Response for Intellectual Property Theft;Collect related network traffic logs;SIEM;5
+24;24-4;Incident Response for Intellectual Property Theft;Collect related network traffic capture;FULL PACKET CAPTURE;4
+24;24-5;Incident Response for Intellectual Property Theft;Isolate system containing sensitive IP to prevent further unauthorized access or data exfiltration;NAC;5
+24;24-6;Incident Response for Intellectual Property Theft;Collect memory image of the system containing sensitive IP;FORENSIC DATA COLLECTOR;5
+24;24-7;Incident Response for Intellectual Property Theft;Restore affected systems from known good backups and ensure that proper security measures, including encryption and access controls, are in place;BACKUP & RESTORE MANAGER;1
+24;24-8;Incident Response for Intellectual Property Theft;Execute vulnerability scan on the affected system.;VULNERABILITY SCANNER;5
+25;25-1;Cyber Espionage Incident Response;Isolate affected segments from the network to prevent further unauthorized access and data exfiltration;FIREWALL;4
+25;25-2;Cyber Espionage Incident Response;Disable compromised accounts associated with the incident;IAM;5
+25;25-3;Cyber Espionage Incident Response;Engage the incident response team to investigate the cyber espionage incident;EMAIL GATEWAY;3
+25;25-4;Cyber Espionage Incident Response;Collect network traffic logs of the affected systems;SIEM;5
+25;25-5;Cyber Espionage Incident Response;Collect network traffic capture of the affected systems;FULL PACKET CAPTURE;4
+25;25-6;Cyber Espionage Incident Response;Collect system logs of the affected systems;SIEM;4
+25;25-7;Cyber Espionage Incident Response;Restore affected systems from known good backups;BACKUP & RESTORE MANAGER;1
+25;25-8;Cyber Espionage Incident Response;Execute vulnerability scan on the affected system.;VULNERABILITY SCANNER;5
+25;25-9;Cyber Espionage Incident Response;Apply security patches if  a vulnerability is detected. ;PATCH MANAGER;5
+26;26-1;Incident Response for Critical Infrastructure Protection;Activate the incident response team and notify relevant stakeholders, including management, IT personnel, and appropriate regulatory authorities;EMAIL GATEWAY;3
+26;26-2;Incident Response for Critical Infrastructure Protection;Isolate compromised systems from critical infrastructure components to prevent further damage or unauthorized access;NAC;5
+26;26-3;Incident Response for Critical Infrastructure Protection;Implement network segmentation to limit communication between compromised and unaffected systems;FIREWALL;5
+26;26-4;Incident Response for Critical Infrastructure Protection;Collect system logs of the compromised system;SIEM;5
+26;26-5;Incident Response for Critical Infrastructure Protection;Collect network logs from or to the compromised system;SIEM;5
+26;26-6;Incident Response for Critical Infrastructure Protection;Collect network traffic capture of the compromised system;FULL PACKET CAPTURE;4
+26;26-7;Incident Response for Critical Infrastructure Protection;Scan the system for vulnerabilities;VULNERABILITY SCANNER;5
+26;26-8;Incident Response for Critical Infrastructure Protection;Implement security patches to mitigate vulnerabilities exploited during the incident;PATCH MANAGER;5
+27;27-1;Incident Response for ATM Skimming;Isolate compromised ATMs from the network and customer usage to prevent further fraudulent transactions;NAC;5
+27;27-2;Incident Response for ATM Skimming;Collect network traffic logs for the compromised ATM;SIEM;5
+27;27-3;Incident Response for ATM Skimming;Collect network traffic capture of the compromised ATM;FULL PACKET CAPTURE;4
+27;27-4;Incident Response for ATM Skimming;Collect Ram image of the compromised ATM;FORENSIC DATA COLLECTOR;5
+28;28-1;Incident Response for Point-of-Sale (POS) System Breach;Disconnect compromised POS systems from the network to prevent further unauthorized access and potential data exfiltration;NAC;4
+28;28-2;Incident Response for Point-of-Sale (POS) System Breach;Implement network segmentation or access controls to limit communication with compromised systems.;FIREWALL;5
+28;28-3;Incident Response for Point-of-Sale (POS) System Breach;Engage the incident response team, POS system administrators, and forensic experts to investigate the breach;EMAIL GATEWAY;3
+28;28-4;Incident Response for ATM Skimming;Collect network traffic logs for the compromised POS;SIEM;5
+28;28-5;Incident Response for ATM Skimming;Collect network traffic capture of the compromised POS;FULL PACKET CAPTURE;4
+29;29-1;Incident Response for Mobile Device Security Breach;Isolate affected devices from the network to prevent further unauthorized access and potential data exfiltration;NAC;5
+29;29-2;Incident Response for Mobile Device Security Breach;Get user accounts with associated mobile devices;MDM;5
+29;29-3;Incident Response for Mobile Device Security Breach;Disable compromised accounts associated with the breached mobile device.;IAM;5
+29;29-4;Incident Response for Mobile Device Security Breach;Remotely lock the compromised device;MDM;5
+29;29-5;Incident Response for Mobile Device Security Breach;Engage the incident response team to investigate the security breach ;EMAIL GATEWAY;3
+29;29-6;Incident Response for Mobile Device Security Breach;Collect network traffic logs of the compromised device;SIEM;5
+29;29-7;Incident Response for Mobile Device Security Breach;Collect device information of the compromised device;MDM;4
+30;30-1;Incident Response for Lost or Stolen Devices;Collect device information of the compromised device;MDM;4
+30;30-2;Incident Response for Lost or Stolen Devices;Collect geo information of the device;MDM;5
+30;30-3;Incident Response for Lost or Stolen Devices;Collect network traffic logs of the stolen device;SIEM;5
+30;30-4;Incident Response for Lost or Stolen Devices;Disable the accounts associated with the stolen device;IAM;5
+30;30-5;Incident Response for Lost or Stolen Devices;Remotely wipe the device to prevent unauthorized access and potential data breaches;MDM;5
+30;30-6;Incident Response for Lost or Stolen Devices;Engage the incident response team to investigate the circumstances surrounding the lost or stolen device;EMAIL GATEWAY;3
+30;30-7;Incident Response for Lost or Stolen Devices;Restore data of the user from backups to the new device;BACKUP & RESTORE MANAGER;1
+31;31-1;Incident Response for Unauthorized Network Access;Isolate affected systems to prevent further unauthorized access and limit potential damage;NAC;5
+31;31-2;Incident Response for Unauthorized Network Access;Isolate affected network segments to prevent further unauthorized access and limit potential damage;FIREWALL;4
+31;31-3;Incident Response for Unauthorized Network Access;Block the unauthorized entity from firewall;FIREWALL;5
+31;31-4;Incident Response for Unauthorized Network Access;Engage the incident response team to investigate the unauthorized network access incident;EMAIL GATEWAY;3
+31;31-5;Incident Response for Unauthorized Network Access;Collect network logs to understand the nature of the unauthorized access;SIEM;5
+31;31-6;Incident Response for Unauthorized Network Access;Collect network traffic captures to understand the nature of the unauthorized access;FULL PACKET CAPTURE;4
+31;31-7;Incident Response for Unauthorized Network Access;Scan the affected systems for possible vulnerabilities.;VULNERABILITY SCANNER;5
+31;31-8;Incident Response for Unauthorized Network Access;Apply patches and updates to vulnerable software or operating systems if any vulnerability is detected.;PATCH MANAGER;5
+31;31-9;Incident Response for Unauthorized Network Access;Reset passwords associated with compromised accounts to prevent further unauthorized access;IAM;4
+32;32-1;Incident Response for Payment Card Fraud;Disable compromised accounts to prevent further unauthorized transactions;IAM;4
+32;32-2;Incident Response for Payment Card Fraud;Collect network traffic captures related to the fraudulent activity;FULL PACKET CAPTURE;4
+32;32-3;Incident Response for Payment Card Fraud;Collect transaction logs of the related account;SIEM;5
+32;32-4;Incident Response for Payment Card Fraud;Engage the incident response team to investigate the payment card fraud incident;EMAIL GATEWAY;3
+33;33-1;Incident Response for Account Takeover;Immediately disable suspected compromised accounts to prevent further unauthorized access;IAM;5
+33;33-2;Incident Response for Account Takeover;Reset passwords associated with compromised accounts;IAM;5
+33;33-3;Incident Response for Account Takeover;Engage the incident response team to investigate the account takeover incident;EMAIL GATEWAY;3
+33;33-4;Incident Response for Account Takeover;Collect user activity logs to determine the extent of the compromise;SIEM;5
+33;33-5;Incident Response for Account Takeover;Collect email traffic logs of the compromised account;SIEM;5
+34;34-1;Incident Response for Unauthorized System Configuration Changes;Engage the incident response team to assess the impact and severity of the unauthorized configuration changes;EMAIL GATEWAY;3
+34;34-2;Incident Response for Unauthorized System Configuration Changes;Collect system logs of the related system;SIEM;5
+34;34-3;Incident Response for Unauthorized System Configuration Changes;Collect network traffic logs of the related system;SIEM;5
+34;34-4;Incident Response for Unauthorized System Configuration Changes;Collect FIM logs of the related system;SIEM;5
+34;34-5;Incident Response for Unauthorized System Configuration Changes;Restore the original configuration using configuration backup or version control mechanisms;BACKUP & RESTORE MANAGER;1
+35;35-1;Incident Response for Unauthorized Software Installation;Engage the incident response team to investigate the incident;EMAIL GATEWAY;3
+35;35-2;Incident Response for Unauthorized Software Installation;Isolate affected system to prevent further propagation of unauthorized software;NAC;5
+35;35-3;Incident Response for Unauthorized Software Installation;Collect the system logs of the affected systems.;SIEM;5
+35;35-4;Incident Response for Unauthorized Software Installation;Scan the system for malicious activities.;EDR;4
+35;35-5;Incident Response for Unauthorized Software Installation;If there is no malicious activity, remove unauthorized software ;Configuration Manager;2
+36;36-1;Incident Response for Unauthorized Access to Sensitive Data;Immediately isolate the affected system to prevent further unauthorized access or data leakage;NAC;5
+36;36-2;Incident Response for Unauthorized Access to Sensitive Data;Engage the incident response team to investigate the unauthorized access incident;EMAIL GATEWAY;3
+36;36-3;Incident Response for Unauthorized Access to Sensitive Data;Collect DLP logs from SIEM to identify the source, extent, and potential impact of the unauthorized access;SIEM;4
+36;36-4;Incident Response for Unauthorized Access to Sensitive Data;Collect network trafiic logs of the affected system to identify the source, extent, and potential impact of the unauthorized access;SIEM;4
+36;36-5;Incident Response for Unauthorized Access to Sensitive Data;Collect EDR logs of the affected system;SIEM;4
+37;37-1;Incident Response for Security Policy Violations;Engage the incident response team to investigate the security policy violation incident;EMAIL GATEWAY;3
+38;38-1;Incident Response for Suspicious Network Traffic;Engage the incident response team to investigate the suspicious network traffic incident;EMAIL GATEWAY;3
+38;38-2;Incident Response for Suspicious Network Traffic;Gather traffic captures to analyze the nature and potential impact of the suspicious activity;FULL PACKET CAPTURE;4
+38;38-3;Incident Response for Suspicious Network Traffic;Gather network logs to analyze the nature and potential impact of the suspicious activity;SIEM;5
+38;38-4;Incident Response for Suspicious Network Traffic;Isolate affected systems to prevent further propagation of the suspicious network traffic;NAC;5
+38;38-5;Incident Response for Suspicious Network Traffic;Isolate affected network segments to prevent further propagation of the suspicious network traffic;FIREWALL;4
+38;38-6;Incident Response for Suspicious Network Traffic;Scan the affected system for vulnerabilities;VULNERABILITY SCANNER;5
+38;38-7;Incident Response for Suspicious Network Traffic;Apply necessary patches to remediate any identified vulnerabilities or compromised systems;PATCH MANAGER;5
+38;38-8;Incident Response for Suspicious Network Traffic;Apply necessary configuration changes to remediate any identified vulnerabilities or compromised systems;Configuration Manager;5
+39;39-1;Incident Response for Phishing Campaign Targeting Employees;Block access to any malicious links or URLs contained in the phishing emails to prevent further exposure;FIREWALL;5
+39;39-2;Incident Response for Phishing Campaign Targeting Employees;Isolate affected systems to minimize the potential impact and prevent lateral movement within the network;NAC;5
+39;39-3;Incident Response for Phishing Campaign Targeting Employees;Isolate affected accounts to minimize the potential impact and prevent lateral movement within the network;IAM;5
+39;39-4;Incident Response for Phishing Campaign Targeting Employees;Engage the incident response team to investigate the phishing campaign and assess the extent of the compromise;EMAIL GATEWAY;3
+39;39-5;Incident Response for Phishing Campaign Targeting Employees;Collect Ram image of the affected system;FORENSIC DATA COLLECTOR;5
+40;40-1;Incident Response for Denial of Service Attack on Web Services;Engage the incident response team to initiate the pre-defined incident response plan for DoS attacks;EMAIL GATEWAY;3
+40;40-2;Incident Response for Denial of Service Attack on Web Services;Limiting the traffic rate for the webservices;LOAD BALANCER;4
+40;40-3;Incident Response for Denial of Service Attack on Web Services;Block the detected DoS IP addresses;FIREWALL;4
+40;40-4;Incident Response for Denial of Service Attack on Web Services;Collaborate with Internet Service Providers (ISPs) or Content Delivery Networks (CDNs) to divert attack traffic;EMAIL GATEWAY;3
+40;40-5;Incident Response for Denial of Service Attack on Web Services;Collect  network traffic logs of the affected systems;SIEM;5
+40;40-6;Incident Response for Denial of Service Attack on Web Services;Capture network traffic captures of the affected systems;FULL PACKET CAPTURE;4
+41;41-1;Incident Response for DNS Hijacking;Collect DNS resolution logs;SIEM;5
+41;41-2;Incident Response for DNS Hijacking;Collect network traffic logs of the IP addresses for requested DNS;SIEM;5
+41;41-3;Incident Response for DNS Hijacking;Engage the incident response team to investigate the incident;EMAIL GATEWAY;3
+42;42-1;Incident Response for Insider Trading;Engage the incident response team to investigate the incident;EMAIL GATEWAY;3
+42;42-2;Incident Response for Insider Trading;Collect email logs for suspected accunts;SIEM;5
+42;42-3;Incident Response for Insider Trading;Collect network traffic logs for suspected accounts;SIEM;5
+42;42-4;Incident Response for Insider Trading;Collect DLP logs for suspected accounts;SIEM;5
+43;43-1;Incident Response for Social Media Account Compromise;Engage the incident response team to investigate the incident;EMAIL GATEWAY;3
+44;44-1;Incident Response for Stolen Credentials;Immediately disable the compromised credentials to prevent further unauthorized access;IAM;5
+44;44-2;Incident Response for Stolen Credentials;Change passwords associated with the compromised credentials;IAM;5
+44;44-3;Incident Response for Stolen Credentials;Engage the incident response team to investigate the incident and assess the scope and potential impact;EMAIL GATEWAY;3
+44;44-4;Incident Response for Stolen Credentials;Collect authentication logs to identify the source and method of credential theft;SIEM;5
+45;45-1;Incident Response for Suspicious Employee Behavior;Engage the incident response team to assess the severity and potential impact of the suspicious behavior;EMAIL GATEWAY;3
+45;45-2;Incident Response for Suspicious Employee Behavior;Collect system logs of the employee computer;SIEM;2
+45;45-3;Incident Response for Suspicious Employee Behavior;Collect network traffic logs of the employee computer;SIEM;5
+45;45-4;Incident Response for Suspicious Employee Behavior;Temporarily revoke user access privileges ;IAM;5
+46;46-1;Incident Response for Cryptojacking;Isolate affected systems to prevent further spread of the cryptojacking malware;NAC;5
+46;46-2;Incident Response for Cryptojacking;Collect Ram image of the affected system;FORENSIC DATA COLLECTOR;5
+46;46-3;Incident Response for Cryptojacking;Remove the cryptojacking malware from infected system;EDR;5
+46;46-4;Incident Response for Cryptojacking;Scan the affected systems for possible vulnerabilities.;VULNERABILITY SCANNER;5
+46;46-5;Incident Response for Cryptojacking;Patch vulnerabilities to prevent future cryptojacking incidents;PATCH MANAGER;5
+47;47-1;Incident Response for Unauthorized Physical Access;Engage the incident response team to investigate the unauthorized physical access;EMAIL GATEWAY;3
+48;48-1;Incident Response for Advanced Persistent Threats (APTs);Isolate affected systems to prevent further spread of the APT;NAC;5
+48;48-2;Incident Response for Advanced Persistent Threats (APTs);Isolate affected segments of the network to prevent further spread of the APT;FIREWALL;5
+48;48-3;Incident Response for Advanced Persistent Threats (APTs);Activate the incident response team to assist in the response efforts;EMAIL GATEWAY;3
+48;48-4;Incident Response for Advanced Persistent Threats (APTs);Collect Ram image of the affected system;FORENSIC DATA COLLECTOR;5
+48;48-5;Incident Response for Advanced Persistent Threats (APTs);Collect forensic data from the system;FORENSIC DATA COLLECTOR;5
+48;48-6;Incident Response for Advanced Persistent Threats (APTs);Remove APT malware from compromised systems;EDR;5
+48;48-7;Incident Response for Advanced Persistent Threats (APTs);Scan the affected system for vulnerabilities;VULNERABILITY SCANNER;5
+48;48-8;Incident Response for Advanced Persistent Threats (APTs);Patch detected vulnerabilities;PATCH MANAGER;5
+49;49-1;Incident Response for Unauthorized System Administrator Access;Immediately disable the unauthorized system administrator's access privileges;PAM;5
+49;49-2;Incident Response for Unauthorized System Administrator Access;Change the password of the administrator user;IAM;5
+49;49-3;Incident Response for Unauthorized System Administrator Access;Engage the incident response team to investigate the incident;EMAIL GATEWAY;3
+49;49-4;Incident Response for Unauthorized System Administrator Access;Collect system logs related to the administrator user;SIEM;5
+49;49-5;Incident Response for Unauthorized System Administrator Access;Scan the systems used by the administrator for vulnerabilities;VULNERABILITY SCANNER;5
+49;49-6;Incident Response for Unauthorized System Administrator Access;Patch detected vulnerabilities;PATCH MANAGER;5
+50;50-1;Incident Response for Compromised VPN Credentials;Immediately disable the compromised VPN credentials associated with the compromised credentials;IAM;5
+50;50-2;Incident Response for Compromised VPN Credentials;Immediately terminate active VPN sessions associated with the compromised credentials;FIREWALL;5
+50;50-3;Incident Response for Compromised VPN Credentials;Change the passwords used for VPN authentication to prevent further unauthorized access.;IAM;5
+50;50-4;Incident Response for Compromised VPN Credentials; Engage the incident response team to investigate the compromise;EMAIL GATEWAY;3
+50;50-5;Incident Response for Compromised VPN Credentials;Collect VPN logs for the related user;SIEM;5
